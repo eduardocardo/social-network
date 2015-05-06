@@ -41,5 +41,11 @@ public class MessagePost extends Post
         mostrarComentarios();
     }
     
-    
+    /**
+     * Metodo que muestra por pantalla un mensaje indicando
+     */
+    public void printShortSummary()
+    {
+        System.out.println("Este es un post de texto creado por " + getUserName());
+    }
 }
