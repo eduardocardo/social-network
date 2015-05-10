@@ -10,13 +10,11 @@ public class Post
 {
     //indica el nombre del usuario
     private String userName;
-    
     //indica el momento en el que fue creado
     private long timeStamp;
     //indica el numero de likes que tiene el post
     private int likes;
-    //ArrayList que almacena los comentarios que se hacen sobre el post
-    private ArrayList<String> comments;
+    
 
     /**
      * Constructor for objects of class MessagePost
@@ -26,7 +24,7 @@ public class Post
         this.userName = author;
         timeStamp = System.currentTimeMillis();
         likes = 0;
-        comments = new ArrayList<>();
+       
     }
 
     /**
@@ -49,17 +47,7 @@ public class Post
         }
 
     }
-
-    /**
-     * Metodo que añade un comentario a la coleccion de comentarios sobre el post
-     * @param text es el comentario que quiere añadir
-     */
-    public void addComment(String text)
-    {
-        comments.add(text);
-    }
-
-
+   
     /**
      * Metodo que devuelve el tiempo en el que fue creado el post
      * @return el tiempo en el que fue creado en milisegundos
@@ -114,23 +102,5 @@ public class Post
         return likes;
     }
     
-    /**
-     * Metodo que muestra los comentarios que hay sobre el post
-     */
-    public void mostrarComentarios()
-    {
-        if(comments.size() == 0)
-        {
-            System.out.println("No hay comentarios");
-        }
-        else
-        {
-            
-            for(int i = 0; i < comments.size();i++)
-            {
-                System.out.println(comments.get(i));
-            }
-        }
-        
-    }
+    
 }

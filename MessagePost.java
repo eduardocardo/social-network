@@ -6,11 +6,11 @@ import java.lang.System;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class MessagePost extends Post
+public class MessagePost extends PostComments
 {
     //representa el mensaje enviado
     private String message;
-
+   
     /**
      * Constructor for objects of class MessagePost
      */
@@ -18,7 +18,7 @@ public class MessagePost extends Post
     {
         super(author);
         this.message = text;
-        
+       
     }
     
     /**
@@ -48,4 +48,7 @@ public class MessagePost extends Post
     {
         System.out.println("Este es un post de texto creado por " + getUserName());
     }
+    
+    
+       
 }
