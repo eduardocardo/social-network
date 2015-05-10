@@ -5,7 +5,7 @@ import java.util.ArrayList;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class PhotoPost extends Post
+public class PhotoPost extends PostComments
 {
    
     private String fileName;
@@ -20,11 +20,9 @@ public class PhotoPost extends Post
         super(author);
         this.fileName = fileName;
         this.caption = caption;
-        
+       
     }
-
     
-
     /**
      * Metodo que devuelve el nombre del archivo
      * @return  el nombre del archivo
@@ -52,8 +50,8 @@ public class PhotoPost extends Post
             + "\nAsunto :" + caption + "\nLikes : " + getLikes() + 
             "\nEl mensaje fue creado hace " + timeString(System.currentTimeMillis()) 
             + "\nComentarios :");
-        mostrarComentarios(); 
+        mostrarComentarios();
     }
     
-   
+    
 }
